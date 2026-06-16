@@ -1,0 +1,3 @@
+rem >>> Ativando o ambiente Virtual....
+   venv\Scripts\activate
+   

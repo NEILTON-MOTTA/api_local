@@ -1,0 +1,11 @@
+INFO:     127.0.0.1:57846 - "GET /produto_codigo/087533 HTTP/1.1" 500 Internal Server Error
+INFO:     127.0.0.1:58063 - "GET /produto_codigo/087533 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58072 - "GET /produto_codfabricante/PD60 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58585 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58585 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58607 - "GET /produto_codfabricante/PD60 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58823 - "GET /produto_codfabricante/PD90 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58939 - "GET /produto_codfabricante/pd90 HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:59249 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59249 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59262 - "GET /produto_codfabricante/pd90 HTTP/1.1" 200 OK
