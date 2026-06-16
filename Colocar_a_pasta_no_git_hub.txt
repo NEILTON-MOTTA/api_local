@@ -1,0 +1,14 @@
+cmd
+
+echo venv/>> .gitignore
+echo __pycache__/>> .gitignore
+echo *.pyc>> .gitignore
+echo .env>> .gitignore
+
+cmd
+git init
+git add .
+git commit -m "Primeira versao da API local"
+git branch -M main
+git remote add origin https://github.com/NEILTON-MOTTA/api_local.git
+git push -u origin main
