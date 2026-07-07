@@ -1,12 +1,14 @@
 # routes/estoque.py
 from fastapi import APIRouter, Depends, HTTPException,Body, Security, status,Query
 from fastapi.security.api_key import APIKeyHeader
-from database.conexao import get_conexao, release_conexao
+from database.conexao import get_conexao, release_conexao,get_conexao_imagem, release_conexao_imagem
 from psycopg2.extras import RealDictCursor
 import re
 from typing import Dict, Any
 from psycopg2 import errors
-from funcoes.produto import buscar_quantidade_produto
+from funcoes.produto import buscar_quantidade_produto,contar_produtos_por_descricao
+from fastapi.responses import Response
+
 
 
 
@@ -70,10 +72,12 @@ def get_produto_por_codigo(codigo: str):
     cur = conn.cursor(cursor_factory=RealDictCursor)
     try:
         cur.execute("""
-    SELECT est_codigo, est_descricao,est_qtde
-    FROM estoque
-    WHERE est_codigo = %s
-    LIMIT 1
+      SELECT est_codigo, est_descricao,est_aplicacao,est_qtde,est_preco1,est_margem1,est_preco2,est_margem2,est_preco3,est_margem3,est_preco4,est_margem4,
+      fabricante.fab_fabricante,segmentos.seg_segmento
+      FROM estoque left join  fabricante on fabricante.fab_codigo=estoque.est_fabricante
+      left join  segmentos on segmentos.seg_codigo=estoque.est_segmento
+      WHERE est_codigo = %s
+      LIMIT 1
    """, (codigo_produto,))
         produto = cur.fetchone()
     finally:
@@ -82,10 +86,22 @@ def get_produto_por_codigo(codigo: str):
 
     if produto:
         return {
-                 "__codigo": produto["est_codigo"],
-                 "__descricao": produto["est_descricao"],
-                 "__qtde": produto["est_qtde"],
-                 "__retorno":"1"
+                 "codigo": produto["est_codigo"],
+                 "descricao": produto["est_descricao"],
+                 "aplicacao": produto["est_aplicacao"],
+                 "fabricante": produto["fab_fabricante"],
+                 "segmento": produto["seg_segmento"],
+                 "qtde": produto["est_qtde"],
+                 "preco1": produto["est_preco1"],
+                 "margem1": produto["est_margem1"],
+                 "preco2": produto["est_preco2"],
+                 "margem2": produto["est_margem2"],
+                 "preco3": produto["est_preco3"],
+                 "margem3": produto["est_margem3"],
+                 "preco4": produto["est_preco4"],
+                 "margem4": produto["est_margem4"],
+                 "encontrado":True
+
         }
 
     else:
@@ -135,7 +151,7 @@ def get_produto_por_codfabricante(codfabricante: str):
                  "margem3": produto["est_margem3"],
                  "preco4": produto["est_preco4"],
                  "margem4": produto["est_margem4"],
-                 "encontrado":"true"
+                 "encontrado":True
         }
 
     else:
@@ -439,4 +455,188 @@ def put_inventario_qtde(
         cursor.close()
         release_conexao(conn)
 
-      
+
+
+    
+ #-----------------------------------------------------
+ #-----------------------------------------------------
+ #Declarado  no inicio
+ #from fastapi.responses import Response
+ #-----------------------------------------------------
+ #Rota  5 para buscar Imagem
+ #-----------------------------------------------------        
+@router.get("/produto_foto/{codigo}/{numero}")
+def produto_foto(codigo: str, numero: int):
+
+    conn = get_conexao_imagem()
+
+    try:
+        cursor = conn.cursor()
+
+        cursor.execute("SELECT current_database()")
+        print("BANCO ATUAL:", cursor.fetchone())
+
+        cursor.execute("""
+            SELECT fot_codproduto, fot_numero, fot_imagemproduto
+            FROM fotos_produtos
+            WHERE fot_codproduto = %s
+              AND fot_numero = %s
+        """, (codigo, numero))
+
+        row = cursor.fetchone()
+
+        if not row:
+            raise HTTPException(status_code=404, detail="Foto não encontrada")
+
+        print("Tipo imagem:", type(row[2]))
+        print("Valor imagem:", row[2])
+
+        if row[2] is None:
+            raise HTTPException(status_code=404, detail="Campo imagem está NULL")
+
+        foto_bytes = bytes(row[2])
+
+        print("TAMANHO FOTO:", len(foto_bytes))
+        print("INICIO BYTES:", foto_bytes[:10])
+
+        if len(foto_bytes) == 0:
+            raise HTTPException(status_code=404, detail="Foto vazia")
+
+        return Response(
+            content=foto_bytes,
+            media_type="image/jpeg"
+        )
+
+    finally:
+        release_conexao_imagem(conn)
+
+
+
+
+        
+# -----------------------------------------------
+# --- Rota 6: Buscar numero de fotos --
+# -----------------------------------------------
+@router.get("/produto_numfotos/{codigo}", dependencies=[Depends(validar_api_key)])
+def get_produto_numfotos(codigo: str):
+    codigo_produto = re.sub(r"\D", "", codigo or "")
+    if len(codigo_produto) != 6:
+        raise HTTPException(status_code=400, detail="Codigo Produto inválido (use 6 dígitos).")
+  
+    
+    
+    conn = get_conexao_imagem()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    try:
+        cur.execute("""
+    SELECT count(fot_numero)  as xtot
+    from fotos_produtos
+    WHERE fot_codproduto = %s
+    
+   """, (codigo_produto,))
+        produto = cur.fetchone()
+    finally:
+        cur.close()
+        release_conexao_imagem(conn)
+
+    if produto:
+        return {
+                 
+                 "qtde": produto["xtot"],
+                 "encontrado":True
+        }
+
+    else:
+        raise HTTPException(status_code=404, detail="Produto não encontrado")
+    
+
+
+
+#------------------------------------------------------------  
+# --- Rota 7: Buscar Produto por descricao-------------------
+#------------------------------------------------------------
+@router.get("/produto_descricao/{descricao}", dependencies=[Depends(validar_api_key)])
+def get_produto_por_descricao(
+    descricao: str,
+    limit: int = Query(50, ge=1, le=200),
+    offset: int = Query(0, ge=0)
+):
+    descricao_produto = (descricao or "").strip().upper()
+
+    conn = get_conexao()
+    cursor = conn.cursor(cursor_factory=RealDictCursor)
+
+    total = contar_produtos_por_descricao(descricao_produto)
+
+    try:
+        cursor.execute(
+            """
+            SELECT 
+                est_codigo,
+                est_codfabricante,
+                est_descricao,
+                est_aplicacao,
+                est_qtde,
+                est_preco1,
+                est_margem1,
+                est_preco2,
+                est_margem2,
+                est_preco3,
+                est_margem3,
+                est_preco4,
+                est_margem4,
+                fabricante.fab_fabricante,
+                segmentos.seg_segmento
+            FROM estoque
+            LEFT JOIN fabricante 
+                ON fabricante.fab_codigo = estoque.est_fabricante
+            LEFT JOIN segmentos 
+                ON segmentos.seg_codigo = estoque.est_segmento
+            WHERE est_descricao ILIKE %s
+            ORDER BY est_descricao ASC
+            LIMIT %s OFFSET %s
+            """,
+            (f"{descricao_produto}%", limit, offset)
+        )
+
+        rows = cursor.fetchall()
+
+        if not rows:
+            raise HTTPException(
+                status_code=404,
+                detail="Produto não encontrado."
+            )
+
+        resultados = [
+            {
+                "codigo": r["est_codigo"],
+                "codfabricante": r["est_codfabricante"],
+                "descricao": r["est_descricao"],
+                "aplicacao": r["est_aplicacao"],
+                "fabricante": r["fab_fabricante"],
+                "segmento": r["seg_segmento"],
+                "qtde": r["est_qtde"],
+                "preco1": r["est_preco1"],
+                "margem1": r["est_margem1"],
+                "preco2": r["est_preco2"],
+                "margem2": r["est_margem2"],
+                "preco3": r["est_preco3"],
+                "margem3": r["est_margem3"],
+                "preco4": r["est_preco4"],
+                "margem4": r["est_margem4"],
+                "encontrado": True
+            }
+            for r in rows
+        ]
+
+        return {
+            
+            "items": resultados,
+            "offset": offset,
+            "limit": limit,
+            "count": total
+        }
+
+    finally:
+        cursor.close()
+        release_conexao(conn)

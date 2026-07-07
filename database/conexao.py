@@ -6,6 +6,9 @@ from psycopg2.pool import ThreadedConnectionPool
 load_dotenv()
 
 # Cria o pool
+# --------------------------------------------------
+# Pool Banco Principal
+# --------------------------------------------------
 connection_pool = ThreadedConnectionPool(
     1,
     10,
@@ -16,6 +19,25 @@ connection_pool = ThreadedConnectionPool(
     password=os.getenv("DB_PASSWORD")
 )
 
+# --------------------------------------------------
+# Pool Banco Imagens
+# --------------------------------------------------
+
+
+
+connection_pool_imagem = ThreadedConnectionPool(
+    1,
+    5,
+    host=os.getenv("DB_HOST"),
+    port=os.getenv("DB_PORT"),
+    database="imagens",
+    user=os.getenv("DB_USER"),
+    password=os.getenv("DB_PASSWORD")
+)
+
+# --------------------------------------------------
+# Banco Principal
+# --------------------------------------------------
 # Pega conexão
 def get_conexao():
     return connection_pool.getconn()
@@ -23,3 +45,15 @@ def get_conexao():
 # Devolve conexão
 def release_conexao(conn):
     connection_pool.putconn(conn)
+
+
+
+# --------------------------------------------------
+# Banco Imagem
+# --------------------------------------------------
+
+def get_conexao_imagem():
+    return connection_pool_imagem.getconn()
+
+def release_conexao_imagem(conn):
+    connection_pool_imagem.putconn(conn)
