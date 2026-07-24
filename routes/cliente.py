@@ -17,38 +17,26 @@ router = APIRouter()
 #-------------------------------------------------------------------------------
 #-------------------------------------------------------------------------------
 api_key_header = APIKeyHeader(name="X-API-Key", auto_error=False)
-cnpj_header = APIKeyHeader(name="X-CNPJ", auto_error=False)
 
-def validar_api_key(
-    api_key: str = Security(api_key_header),
-    cnpj: str = Security(cnpj_header)
-):
+def validar_api_key(api_key: str = Security(api_key_header)):
     if not api_key:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="API key ausente (use o header X-API-Key)."
         )
 
-    if not cnpj:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="CNPJ ausente (use o header X-CNPJ)."
-        )
-
     conn = get_conexao()
     cursor = conn.cursor()
     try:
+    
         cursor.execute("""
             SELECT api_codigo, api_cnpj
             FROM api_key
             WHERE api_key = %s
-              AND api_cnpj = %s
               AND (ativo = TRUE OR ativo IS NULL)
             LIMIT 1
-        """, (api_key, cnpj))
-
+        """, (api_key,))
         row = cursor.fetchone()
-
     finally:
         cursor.close()
         release_conexao(conn)
@@ -56,20 +44,18 @@ def validar_api_key(
     if not row:
         raise HTTPException(
             status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="API key ou CNPJ inválido."
+            detail="API key inválida."
         )
 
-    return {
-        "api_codigo": row[0],
-        "api_cnpj": row[1]
-    }
-#-------------------------------------------------------------------------------
-#-------------------------------------------------------------------------------
-
+    # Você pode retornar dados da chave para usar dentro das rotas (ex.: cnpj do integrador)
+    return {"api_codigo": row[0], "api_cnpj": row[1]}
 
 
 # Aplica a validação de API key em TODO o router
 
+
+
+#-------------------------------------------------------------------------------
 
 # -----------------------------------------
 # --- Rota 1: Buscar cliente por codigo ---

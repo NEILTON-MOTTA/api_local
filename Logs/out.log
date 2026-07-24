@@ -1,249 +1,51 @@
-INFO:     2804:14d:1681:8c46:dbe7:1247:c82c:e374:0 - "GET /produto_numfotos/024031 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:dbe7:1247:c82c:e374:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:dbe7:1247:c82c:e374:0 - "GET /produto_numfotos/002431 HTTP/1.1" 500 Internal Server Error
-INFO:     2804:14d:1681:8c46:dbe7:1247:c82c:e374:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 500 Internal Server Error
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 500 Internal Server Error
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 401 Unauthorized
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 401 Unauthorized
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /produto_codigo/002431 HTTP/1.1" 401 Unauthorized
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /produto_codigo/002431 HTTP/1.1" 401 Unauthorized
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60619 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60619 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60641 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60641 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60642 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60642 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60659 - "GET /cmvcompras%7D HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60810 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60810 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60811 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvfornecedor HTTP/1.1" 200 OK
+INFO:     189.92.197.48:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     189.92.197.48:0 - "GET /produto_codigo/pd90 HTTP/1.1" 400 Bad Request
+INFO:     189.92.197.48:0 - "GET /produto_codfabricante/pd90 HTTP/1.1" 200 OK
+INFO:     187.125.160.178:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     187.125.160.178:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
 INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C737B87D00>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /produto_numfotos/002041 HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /produto_numfotos/002031 HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /produto_codfabricante/Pd90 HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
-INFO:     186.192.164.130:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/Vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/Vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:3ccc:d27d:e3d3:b733:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/Vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:3ccc:d27d:e3d3:b733:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:3ccc:d27d:e3d3:b733:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0400>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0280>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:3ccc:d27d:e3d3:b733:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0400>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0280>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     186.244.28.60:0 - "GET /valida_auth/Vagner/4848 HTTP/1.1" 200 OK
-INFO:     186.244.28.60:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     186.244.28.60:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0400>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     186.244.28.60:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     186.244.28.60:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     2804:388:8033:f2eb:588c:deff:fe8c:c932:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     189.92.21.182:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     189.92.21.182:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0280>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     189.92.21.182:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     189.92.21.182:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     189.92.21.182:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     189.92.21.182:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/Vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0400>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0400>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/Vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0280>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0400>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0100>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001C7392D0400>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/2 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_numfotos/002431 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:60cd:3469:6590:e21c:0 - "GET /valida_auth/Vagner/4848 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /produto_descricao/Rolamento?limit=50 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /produto_descricao/Rolamento?limit=50 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /produto_descricao/Peleca?limit=50 HTTP/1.1" 404 Not Found
-INFO:     66.249.85.102:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     74.125.210.65:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     74.125.210.64:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     74.125.210.65:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:e886:356e:a5cc:e60c:0 - "GET /produto_descricao/Rolamento?limit=50 HTTP/1.1" 200 OK
-BANCO ATUAL: ('imagens',)
-Tipo imagem: <class 'memoryview'>
-Valor imagem: <memory at 0x000001D9540777C0>
-TAMANHO FOTO: 401622
-INICIO BYTES: b'BM\xd6 \x06\x00\x00\x00\x00\x00'
-INFO:     177.65.38.170:0 - "GET /produto_foto/002431/1 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=50 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=50 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=50 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=50 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=50 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /produto_descricao/ROLAMENTO?limit=50&offset=50 HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8c46:81ff:d836:59f3:6412:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     189.92.23.24:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
+INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
+INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8c46:5ed9:51d:c2b1:a3dc:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8c46:5ed9:51d:c2b1:a3dc:0 - "GET /venda_diaria HTTP/1.1" 200 OK

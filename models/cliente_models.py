@@ -46,7 +46,7 @@ class ClienteIn(BaseModel):
     cli_contato: Optional[str] = None
     cli_email: Optional[EmailStr] = None
     cli_obs: Optional[str] = None
-    cli_desativar_sistema: Optional[bool] = None
+    cli_desativar_sistema: Optional[int] = 0
 
     # --- Normalizações e validações ---
 
