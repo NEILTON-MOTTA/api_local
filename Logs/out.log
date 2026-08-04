@@ -1,51 +1,45 @@
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 500 Internal Server Error
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 500 Internal Server Error
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 401 Unauthorized
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 401 Unauthorized
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /produto_codigo/002431 HTTP/1.1" 401 Unauthorized
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /produto_codigo/002431 HTTP/1.1" 401 Unauthorized
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras%7D HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60619 - "GET /docs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60619 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60641 - "GET /docs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60641 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60642 - "GET /docs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60642 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60659 - "GET /cmvcompras%7D HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60810 - "GET /docs HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60810 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     127.0.0.1:60811 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:502d:398:dcb8:16ff:fea8:aa9b:0 - "GET /cmvfornecedor HTTP/1.1" 200 OK
-INFO:     189.92.197.48:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     189.92.197.48:0 - "GET /produto_codigo/pd90 HTTP/1.1" 400 Bad Request
-INFO:     189.92.197.48:0 - "GET /produto_codfabricante/pd90 HTTP/1.1" 200 OK
-INFO:     187.125.160.178:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     187.125.160.178:0 - "GET /produto_codigo/002431 HTTP/1.1" 200 OK
-INFO:     177.65.38.170:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:81ff:d836:59f3:6412:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     189.92.23.24:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
-INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
-INFO:     2804:14d:1681:8c46:188b:64c0:7941:259d:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:5ed9:51d:c2b1:a3dc:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8c46:5ed9:51d:c2b1:a3dc:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     66.249.85.108:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     66.249.88.162:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     66.249.88.166:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     66.249.88.162:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 500 Internal Server Error
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     66.249.85.103:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     74.125.212.66:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     74.125.212.66:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     74.125.212.66:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 401 Unauthorized
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvfornecedor HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvfornecedor HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     66.249.85.102:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error

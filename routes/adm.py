@@ -7,7 +7,8 @@ import re
 from typing import Dict, Any
 from psycopg2 import errors
 from fastapi.responses import Response
-from funcoes.adm import retornar_cmv,retornar_compras,retornar_pagfornecedor
+from funcoes.adm import retornar_cmv,retornar_compras,retornar_pagfornecedor,retornar_vendaacumulada
+from funcoes.adm import markup,margem,diferenca_percentual
 
 
 
@@ -72,9 +73,11 @@ def get_cmv_x_compras():
     
     cmv = retornar_cmv()
     compras=retornar_compras()
+    venda=retornar_vendaacumulada()
     return {
             "CMV":cmv,
             "compras":compras,
+            "venda":venda,
             "encontrado":True
 
      }
@@ -93,9 +96,11 @@ def get_cmv_x_pagfornecedor():
     
     cmv = retornar_cmv()
     pagforn=retornar_pagfornecedor()
+    venda=retornar_vendaacumulada()
     return {
             "CMV":cmv,
             "Pagfornecedor":pagforn,
+            "venda":venda,
             "encontrado":True
 
      }
@@ -114,8 +119,10 @@ def get_venda_por_dia():
     
     try:
         cur.execute("""
-        select cor_data,sum(cor_total) as xtot,Sum(cor_volume) as xvol,count(cor_numero) as xtotalvendas from corpo_prevenda 
-        where cor_data between date_trunc('month', CURRENT_DATE)  AND CURRENT_DATE  and cor_situacao='F'  group by  cor_data order by cor_data
+          select cor_data,sum(cor_total) as xtotavendas,Sum(cor_volume) as xvol,count(cor_numero) as xqtdevendas,sum(cor_cmv) as xcmv,sum(cor_totalfrete) as xfrete from corpo_prevenda
+          where corpo_prevenda.cor_data between date_trunc('month', CURRENT_DATE)
+          AND CURRENT_DATE  and corpo_prevenda.cor_situacao = 'F'
+          group by  cor_data order by cor_data
 
         """, ())
 
@@ -130,19 +137,33 @@ def get_venda_por_dia():
 
         resultados = []
 
-        for r in rows:
-
-            if r["xtotalvendas"] > 0 and r["xtot"] > 0:
-                ticketmedio = r["xtot"] / r["xtotalvendas"]
+        for registro in rows:
+            
+            venda_liquida: float = float(registro["xtotavendas"]  or 0) - float(registro["xfrete"]  or 0)
+            qtde_vendas: float = float(registro["xqtdevendas"]  or 0)
+            cmv: float = float(registro["xcmv"]  or 0)
+            
+            markup_real: float = markup(venda_liquida, cmv)
+            margem_real: float = margem(venda_liquida, cmv)
+            
+            ticketmedio: float
+            
+            if venda_liquida > 0 and qtde_vendas > 0:
+                ticketmedio = venda_liquida / qtde_vendas
             else:
-                ticketmedio = 0
+                ticketmedio = 0.0
 
+
+                
+           
             resultados.append({
-                "data": r["cor_data"],
-                "vendas": r["xtot"],
-                "volume": r["xvol"],
-                "qtde_vendas": r["xtotalvendas"],
+                "data": registro["cor_data"],
+                "vendas": registro["xtotavendas"],
+                "volume": registro["xvol"],
+                "qtde_vendas": registro["xqtdevendas"],
                 "ticketmedio": round(ticketmedio, 2),
+                "markup": round(markup_real, 2),
+                "margem": round(margem_real, 2),
                 "encontrado": True
             })
 

@@ -65,8 +65,8 @@ def valida_login_get(login: str, senha: str, _apikey = Depends(validar_api_key))
     
     # Busca o cliente no banco (exemplo de campos: cli_codigo, nome, email)
     cursor.execute("""
-            SELECT   usu_login, usu_grupo, fun_nome
-            FROM usuarios left join funcionario on funcionario.fun_login=usuarios.usu_codigo
+            SELECT   usu_login, usu_grupo
+            FROM usuarios_app 
             WHERE usu_login = %s AND usu_senha = %s
             LIMIT 1
         
@@ -87,7 +87,7 @@ def valida_login_get(login: str, senha: str, _apikey = Depends(validar_api_key))
         return {
                  "usuario": senha[0],
                  "perfil": strperfil,
-                 "nome": senha[2],
+                 "nome": senha[0],
                  "encontrou":"true"
                 }
     else:
