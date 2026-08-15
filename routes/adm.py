@@ -164,6 +164,57 @@ def get_venda_por_dia():
                 "ticketmedio": round(ticketmedio, 2),
                 "markup": round(markup_real, 2),
                 "margem": round(margem_real, 2),
+                "cmv": round(cmv, 2),
+                "encontrado": True
+            })
+
+        return {
+            
+            "items": resultados
+        }
+
+    finally:
+        cur.close()
+        release_conexao(conn)
+
+
+    
+# ---------------------------------------------------------
+# --- Rota 1: Buscar Fluxo de caixa - Entradas ------------
+# ---------------------------------------------------------
+@router.get("/fluxo_caixa_entradas", dependencies=[Depends(validar_api_key)])
+def get_fluxo_caixa_entradas():
+    
+    conn = get_conexao()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    
+    try:
+        cur.execute("""
+        Select cai_tipo,sum(cai_entrada) as xtot FROM caixa
+        where (cai_data=CURRENT_DATE)
+        and (substr(cai_movimento,1,2) <>'AC' AND  substr(cai_movimento,1,2) <>'EC' )
+        and cai_entrada> 0 
+        Group by cai_tipo
+        """, ())
+
+        
+        rows = cur.fetchall()
+
+        if not rows:
+            raise HTTPException(
+                status_code=404,
+                detail="venda não encontrado."
+            )
+
+        resultados = []
+
+        for registro in rows:
+            
+            total_formapag: float = float(registro["xtot"]  or 0)
+                   
+            resultados.append({
+                "Forma": registro["cai_tipo"],
+                "Valor":  round(total_formapag, 2),
                 "encontrado": True
             })
 
@@ -176,3 +227,101 @@ def get_venda_por_dia():
         cur.close()
         release_conexao(conn)
     
+
+# ---------------------------------------------------------
+# --- Rota 1: Buscar Fluxo de caixa - saidas ------------
+# ---------------------------------------------------------
+@router.get("/fluxo_caixa_saidas", dependencies=[Depends(validar_api_key)])
+def get_fluxo_caixa_saidas():
+    
+    conn = get_conexao()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    
+    try:
+        cur.execute("""
+        Select cai_descricao ,cai_tipo,cai_saida FROM caixa
+        where (cai_data=CURRENT_DATE) AND cai_saida>0 AND SUBSTR(cai_movimento,1,2) <>'EC'
+        """, ())
+
+        
+        rows = cur.fetchall()
+
+        if not rows:
+            raise HTTPException(
+                status_code=404,
+                detail="venda não encontrado."
+            )
+
+        resultados = []
+
+        for registro in rows:
+            
+            valor_saida: float = float(registro["cai_saida"]  or 0)
+                   
+            resultados.append({
+                "descricao": registro["cai_descricao"],
+                "forma": registro["cai_tipo"],
+                "valor":  round(valor_saida, 2),
+                "encontrado": True
+            })
+
+        return {
+            
+            "items": resultados
+        }
+
+    finally:
+        cur.close()
+        release_conexao(conn)
+    
+
+
+# ---------------------------------------------------------
+# --- Rota 1: Buscar contas_pagar - abertas ---------------
+# ---------------------------------------------------------
+@router.get("/contas_pagar_abertas", dependencies=[Depends(validar_api_key)])
+def get_contas_pagar_abertas():
+    
+    conn = get_conexao()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    
+    try:
+        cur.execute("""
+        Select pag_datapagar, pag_descricao,pag_valor from contas_pagar
+        where pag_datapagar =current_date and pag_situacao=0
+        """, ())
+
+        
+        rows = cur.fetchall()
+
+        if not rows:
+            raise HTTPException(
+                status_code=404,
+                detail="venda não encontrado."
+            )
+
+        resultados = []
+
+        for registro in rows:
+            
+            valor_fatura: float = float(registro["pag_valor"]  or 0)
+                   
+            resultados.append({
+                "vencimento": registro["pag_datapagar"],
+                "descricao": registro["pag_descricao"],
+                "valor":  round(valor_fatura, 2),
+                "encontrado": True
+            })
+
+        return {
+            
+            "items": resultados
+        }
+
+    finally:
+        cur.close()
+        release_conexao(conn)
+    
+
+
+

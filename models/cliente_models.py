@@ -115,12 +115,19 @@ class ClienteIn(BaseModel):
             return v
         return str(v).strip()
 
+
     # E-mail minúsculo
     @validator("cli_email", pre=True)
     def normaliza_email(cls, v):
         if v is None:
-            return v
-        return str(v).strip().lower()
+            return None
+
+        v = str(v).strip().lower()
+
+        if v == "":
+            return None
+
+        return v
 
 
 # --------------------------------------
@@ -165,16 +172,26 @@ class ClienteUpdate(BaseModel):
             raise ValueError("cli_cnpj deve ter 11 (CPF) ou 14 (CNPJ) dígitos.")
         return dig
 
-    @validator("cli_datacad", "cli_datanasc")
+
+
+    @validator("cli_datacad", "cli_datanasc", pre=True)
     def valida_data_brasileira(cls, v):
         if v is None:
-            return v
-        try:
-            datetime.strptime(v, "%d/%m/%Y")
-        except ValueError:
-            raise ValueError("Data deve estar no formato DD/MM/YYYY e ser válida.")
-        return v
+            return None
 
+        v = str(v).strip()
+
+        if v == "":
+            return None
+
+        try:
+           datetime.strptime(v, "%d/%m/%Y")
+        except ValueError:
+            raise ValueError(
+               "Data deve estar no formato DD/MM/YYYY e ser válida."
+        )
+
+        return v
     @validator("cli_telefone1", "cli_telefone2", pre=True)
     def normaliza_telefone(cls, v):
         if v is None:

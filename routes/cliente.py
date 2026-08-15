@@ -130,7 +130,7 @@ def get_cliente(cli_codigo: str):
 @router.get("/cliente_cnpj/{cnpj}")
 def get_cliente_por_cnpj(cnpj: str, cred = Depends(validar_api_key)):
     cnpj_cliente = re.sub(r"\D", "", cnpj or "")
-    if len(cnpj_cliente) != 14:
+    if len(cnpj_cliente) not in (11, 14):
         raise HTTPException(status_code=400, detail="CNPJ inválido (use 14 dígitos).")
 
     conn = get_conexao()
@@ -438,41 +438,78 @@ def inserir_cliente(payload: ClienteIn = Body(...)):
     # checa obrigatórios
     obrigatorios = ["cli_codigo", "cli_nome", "cli_cnpj"]
     faltando = [c for c in obrigatorios if c not in dados or not dados[c]]
+
     if faltando:
-        raise HTTPException(status_code=422, detail=f"Campos obrigatórios ausentes: {', '.join(faltando)}")
-
-    # Colunas que são DATE no PostgreSQL
-    campos_data = {"cli_datacad", "cli_datanasc"}
-
-    colunas = []
-    valores_expr = []
-    for k in dados.keys():
-        colunas.append(k)
-        if k in campos_data:
-            valores_expr.append(f"to_date(%({k})s, 'DD/MM/YYYY')")
-        else:
-            valores_expr.append(f"%({k})s")
-
-    sql = f"""
-        INSERT INTO clientes ({', '.join(colunas)})
-        VALUES ({', '.join(valores_expr)})
-    """
+        raise HTTPException(
+            status_code=422,
+            detail=f"Campos obrigatórios ausentes: {', '.join(faltando)}"
+        )
 
     conn = get_conexao()
     cur = conn.cursor()
+
     try:
+        # -------------------------------------------------
+        # Verifica se CPF/CNPJ já está cadastrado
+        # -------------------------------------------------
+        cur.execute("""
+            SELECT cli_codigo
+              FROM clientes
+             WHERE cli_cnpj = %s
+             LIMIT 1
+        """, (dados["cli_cnpj"],))
+
+        cliente_existente = cur.fetchone()
+
+        if cliente_existente:
+            raise HTTPException(
+                status_code=409,
+                detail="CPF/CNPJ já cadastrado."
+            )
+
+        # Colunas que são DATE no PostgreSQL
+        campos_data = {"cli_datacad", "cli_datanasc"}
+
+        colunas = []
+        valores_expr = []
+
+        for k in dados.keys():
+            colunas.append(k)
+
+            if k in campos_data:
+                valores_expr.append(
+                    f"to_date(%({k})s, 'DD/MM/YYYY')"
+                )
+            else:
+                valores_expr.append(f"%({k})s")
+
+        sql = f"""
+            INSERT INTO clientes ({', '.join(colunas)})
+            VALUES ({', '.join(valores_expr)})
+        """
+
         cur.execute(sql, dados)
         conn.commit()
-        return {"mensagem": "Cliente inserido com sucesso", "__retorno": "1"}
+
+        return {
+            "mensagem": "Cliente inserido com sucesso",
+            "__retorno": "1"
+        }
+
+    except HTTPException:
+        conn.rollback()
+        raise
+
     except Exception as e:
         conn.rollback()
-        raise HTTPException(status_code=400, detail=f"Erro ao inserir cliente: {str(e)}")
+        raise HTTPException(
+            status_code=400,
+            detail=f"Erro ao inserir cliente: {str(e)}"
+        )
+
     finally:
         cur.close()
         release_conexao(conn)
-
-
-
 
 
 

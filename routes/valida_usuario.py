@@ -67,7 +67,7 @@ def valida_login_get(login: str, senha: str, _apikey = Depends(validar_api_key))
     cursor.execute("""
             SELECT   usu_login, usu_grupo
             FROM usuarios_app 
-            WHERE usu_login = %s AND usu_senha = %s
+            WHERE usu_login = %s AND usu_senha = %s and usu_ativo=1
             LIMIT 1
         
     """, (login, senha))

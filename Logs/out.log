@@ -1,45 +1,52 @@
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     66.249.85.108:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     66.249.88.162:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     66.249.88.166:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     66.249.88.162:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 500 Internal Server Error
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     66.249.85.103:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     74.125.212.66:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     74.125.212.66:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     74.125.212.66:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 401 Unauthorized
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvfornecedor HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvfornecedor HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:388:411c:cae7:1401:7cff:fe4d:f711:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     191.57.11.98:0 - "GET /cmvcompras HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     66.249.85.102:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:8abf:b725:2cef:b6c2:c065:0 - "GET /venda_diaria HTTP/1.1" 500 Internal Server Error
+INFO:     177.65.32.191:0 - "GET /valida_auth/NEILTON/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4838 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/flute HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
+INFO:     177.65.32.191:0 - "GET /cliente_cnpj/07782894000151 HTTP/1.1" 404 Not Found
+INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /produto_descricao/cd?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     66.249.85.65:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.178.11.66:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.178.15.168:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.178.15.166:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /cliente_nome/Flutter%20?limit=50 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
+INFO:     177.65.32.191:0 - "GET /cliente_cnpj/07782864000151 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_cnpj/07782864000151 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:3b19:8a0a:1f38:6a2:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
+INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
