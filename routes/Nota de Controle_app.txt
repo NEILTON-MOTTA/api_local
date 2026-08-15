@@ -1,0 +1,4 @@
+controle_app.py esta api nao eh usada aqui so na api que esta
+instalada na platon
+coloquei aqui que sempre atualizo as rotas do api_git que corresponde 
+a planton da erro
