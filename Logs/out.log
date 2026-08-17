@@ -63,3 +63,6 @@ INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
 INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
 INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 200 OK
 INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241729 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /produto_descricao/cd?limit=50&offset=0 HTTP/1.1" 200 OK

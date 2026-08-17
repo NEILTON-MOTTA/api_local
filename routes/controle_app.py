@@ -58,7 +58,7 @@ def validar_api_key(api_key: str = Security(api_key_header)):
 
 
 # ---------------------------------------
-# --- Rota 1: Buscar Produto por codigo--
+# --- Rota 1: Valida por cnpj--
 # ---------------------------------------
 @router.get("/empresa_cnpj/{cnpj}", dependencies=[Depends(validar_api_key)])
 def get_empresa_por_cnpj(cnpj: str):
@@ -92,4 +92,42 @@ def get_empresa_por_cnpj(cnpj: str):
     else:
         raise HTTPException(status_code=404, detail="Empresa não encontrado")
     
+
+
+
+
+# ---------------------------------------
+# --- Rota 1: Valida por id--
+# ---------------------------------------
+@router.get("/empresa_id/{buscaid}", dependencies=[Depends(validar_api_key)])
+def get_empresa_por_id(buscaid: str):
+   
+    
+    conn = get_conexao()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    try:
+        cur.execute("""
+    SELECT ctl_cnpj, ctl_empresa, ctl_endpoint, ctl_ativo
+    FROM api_controle_app
+    WHERE ctl_id = %s
+    LIMIT 1
+   """, (buscaid,))
+        empresa = cur.fetchone()
+    finally:
+        cur.close()
+        release_conexao(conn)
+
+    if empresa:
+        return {
+                 "cnpj": empresa["ctl_cnpj"],
+                 "empresa": empresa["ctl_empresa"],
+                 "endpoint": empresa["ctl_endpoint"],
+                 "ativo": empresa["ctl_ativo"],
+                 "encontrado":True
+        }
+
+    else:
+        raise HTTPException(status_code=404, detail="Empresa não encontrado")
+    
+
 
