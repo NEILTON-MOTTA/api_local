@@ -1,68 +1,134 @@
-INFO:     177.65.32.191:0 - "GET /valida_auth/NEILTON/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
-INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4838 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_nome/flute HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
-INFO:     177.65.32.191:0 - "GET /cliente_cnpj/07782894000151 HTTP/1.1" 404 Not Found
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /produto_descricao/cd?limit=50&offset=0 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     66.249.85.65:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50365 - "GET /docs HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50365 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:d41:bb2b:f600:ed4d:80bb:f393:e1ad:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:d41:bb2b:f600:ed4d:80bb:f393:e1ad:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     66.249.85.71:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     192.178.11.65:0 - "GET /docs HTTP/1.1" 200 OK
 INFO:     192.178.11.66:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     192.178.15.168:0 - "GET /docs HTTP/1.1" 200 OK
-INFO:     192.178.15.166:0 - "GET /openapi.json HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /cliente_nome/Flutter%20?limit=50 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:83a2:e915:9bda:7d40:191e:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
-INFO:     177.65.32.191:0 - "GET /cliente_cnpj/07782864000151 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_cnpj/07782864000151 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_nome/flutter HTTP/1.1" 200 OK
-INFO:     2804:14d:1681:83a2:3b19:8a0a:1f38:6a2:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
-INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 400 Bad Request
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     192.178.11.66:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:5d54:965d:aafb:6899:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:5d54:965d:aafb:6899:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:cd65:fbe6:7a45:ee8a:0 - "GET /valida_auth/vagner/4748 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTON HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton HTTP/1.1" 200 OK
 INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
 INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 409 Conflict
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 409 Conflict
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
 INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /cliente_cnpj/00351241729 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
-INFO:     177.65.32.191:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_id/000900 HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:83a2:cd65:fbe6:7a45:ee8a:0 - "GET /cliente_nome/neilton%20post HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     186.209.75.100:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     186.209.75.100:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     9.129.36.32:0 - "GET /cliente/009991 HTTP/1.1" 405 Method Not Allowed
+INFO:     2804:14d:1681:83a2:cd65:fbe6:7a45:ee8a:0 - "GET /valida_auth/vagner/4838 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton%20post HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
+---- SQL GERADA (PATCH) ----
+
+        UPDATE clientes
+           SET cli_nome = 'NEILTO PATCH', cli_telefone1 = '02178654-9090'
+         WHERE cli_codigo = '000900'
+     RETURNING *;
+    
+----------------------------
+INFO:     177.65.32.191:0 - "PATCH /cliente/000900 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton%20post HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton%20pat HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton%20patch HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/Neilton HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTON%20PATCH HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTO%20PATCH HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTO HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
+---- SQL GERADA (PATCH) ----
+
+        UPDATE clientes
+           SET cli_nome = 'NEILTON PATCH', cli_telefone1 = '02178654-9090'
+         WHERE cli_codigo = '000900'
+     RETURNING *;
+    
+----------------------------
+INFO:     177.65.32.191:0 - "PATCH /cliente/000900 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTON%20PATH HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTON%20PATCH HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTON HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/NEILTON?limit=50 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton?limit=50 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton?limit=50 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_codigo/000900 HTTP/1.1" 404 Not Found
+INFO:     177.65.32.191:0 - "GET /cliente_nome/neilton?limit=50 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_codigo/000900 HTTP/1.1" 404 Not Found
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_id/000900 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /valida_auth/Neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_id/000900 HTTP/1.1" 200 OK
+INFO:     104.210.140.129:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     177.65.32.191:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "PUT /numerador_cliente/incrementar HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 422 Unprocessable Content
+INFO:     177.65.32.191:0 - "POST /cliente HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_id/000638 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /cliente_nome/thaysa?limit=50 HTTP/1.1" 200 OK
 INFO:     177.65.32.191:0 - "GET /produto_descricao/cd?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "PUT /inventario_produto/000123/15000.0 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /produto_descricao/cd?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /produto_codigo/000123 HTTP/1.1" 200 OK
+INFO:     177.65.32.191:0 - "GET /fluxo_caixa_saidas HTTP/1.1" 404 Not Found
+INFO:     104.210.140.128:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     189.92.14.76:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     189.92.14.76:0 - "GET /cliente_cnpj/00351241728 HTTP/1.1" 200 OK
+INFO:     189.92.14.76:0 - "GET /cliente_nome/neilton?limit=50 HTTP/1.1" 200 OK
+INFO:     104.210.140.132:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.210.140.136:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.210.140.133:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.210.140.143:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.216:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     51.8.102.209:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     51.8.102.45:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.150:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.94:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.210:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.150:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.216:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.246:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/4838 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/l4848 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /produto_descricao/cd?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /produto_numfotos/000123 HTTP/1.1" 500 Internal Server Error
+INFO:     51.8.102.29:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.246:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     51.8.102.196:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.150:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/4838 HTTP/1.1" 500 Internal Server Error
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/4838 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     66.249.85.65:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     66.102.8.168:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /valida_auth/Neilton/1234 HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /valida_auth/Neilton/1234 HTTP/1.1" 200 OK
+INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /valida_auth/Neilton/MATEUS25%2335 HTTP/1.1" 200 OK

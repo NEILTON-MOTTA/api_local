@@ -1,0 +1,14 @@
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /tabela_produtos/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /tabela_produtos/?limit=50&offset=50 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /tabela_produtos/?limit=50&offset=0 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /tabela_produtos/?limit=50&offset=50 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
