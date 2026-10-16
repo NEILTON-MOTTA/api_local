@@ -2,3 +2,9 @@ venv/
 __pycache__/
 *.pyc
 .env
+
+
+# Chave de assinatura Android
+android/key.properties
+*.jks
+*.keystore

@@ -132,3 +132,61 @@ INFO:     66.102.8.168:0 - "GET /docs HTTP/1.1" 200 OK
 INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /valida_auth/Neilton/1234 HTTP/1.1" 200 OK
 INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /valida_auth/Neilton/1234 HTTP/1.1" 200 OK
 INFO:     2804:14d:1681:917f:5bf1:7726:c343:45d8:0 - "GET /valida_auth/Neilton/MATEUS25%2335 HTTP/1.1" 200 OK
+INFO:     51.8.102.45:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.150:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.102:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     51.8.102.182:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.100:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.45:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.150:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.245:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.182:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.251:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.102:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.182:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.100:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.216:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     51.8.102.55:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.245:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     51.8.102.100:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     51.8.102.56:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 401 Unauthorized
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET / HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 401 Unauthorized
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 500 Internal Server Error
+INFO:     177.195.77.193:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 500 Internal Server Error
+INFO:     177.195.77.193:0 - "GET /valida_auth/neilton/1234 HTTP/1.1" 500 Internal Server Error
+INFO:     177.195.77.193:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 500 Internal Server Error
+INFO:     177.195.77.193:0 - "GET /valida_auth/VAGNER/aa HTTP/1.1" 500 Internal Server Error
+INFO:     177.195.77.193:0 - "GET /valida_auth/VAGNER/4838 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /valida_auth/VAGNER/4848 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 200 OK
+INFO:     187.13.58.114:0 - "GET /valida_auth/vagner/4848 HTTP/1.1" 200 OK
+INFO:     187.13.58.114:0 - "GET /venda_diaria HTTP/1.1" 200 OK
+INFO:     187.13.58.114:0 - "GET /venda_diaria_por_vendedor HTTP/1.1" 200 OK

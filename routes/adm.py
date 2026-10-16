@@ -323,5 +323,55 @@ def get_contas_pagar_abertas():
         release_conexao(conn)
     
 
+  
+
+# ---------------------------------------------------
+# --- Rota 1: Buscar vendas diaria- Vendedores-------
+# ---------------------------------------------------
+@router.get("/venda_diaria_por_vendedor", dependencies=[Depends(validar_api_key)])
+def get_venda_por_dia_por_vendedor():
+    
+    conn = get_conexao()
+    cur = conn.cursor(cursor_factory=RealDictCursor)
+    
+    try:
+        cur.execute("""
+          SELECT funcionario.fun_nome,sum(corpo_prevenda.cor_total) as xtot
+          FROM corpo_prevenda
+          Left join funcionario on corpo_prevenda.COR_vendedor=funcionario.fun_codigo 
+          WHERE   corpo_prevenda.cor_data =current_date  and corpo_prevenda.cor_situacao = 'F' 
+          Group by funcionario.fun_nome order by xtot desc
+
+        """, ())
+
+        
+        rows = cur.fetchall()
+
+        if not rows:
+            raise HTTPException(
+                status_code=404,
+                detail="venda não encontrado."
+            )
+
+        resultados = []
+
+        for registro in rows:
+          
+            resultados.append({
+                "nome": registro["fun_nome"],
+                "vendas": registro["xtot"],
+                "encontrado": True
+            })
+
+        return {
+            
+            "items": resultados
+        }
+
+    finally:
+        cur.close()
+        release_conexao(conn)
+
+
 
 

@@ -70,6 +70,7 @@ def get_tabela_produtos(
             SELECT 
             est_codigo,
             est_codfabricante,
+            est_codoriginal,
             est_codreferencia,
             est_descricao,
             est_aplicacao,
@@ -103,6 +104,7 @@ def get_tabela_produtos(
             {
                 "codigo": r["est_codigo"],
                 "codfabricante": r["est_codfabricante"],
+                "codoriginal": r["est_codoriginal"],
                 "codreferencia": r["est_codreferencia"],
                 "descricao": r["est_descricao"],
                 "aplicacao": r["est_aplicacao"],
