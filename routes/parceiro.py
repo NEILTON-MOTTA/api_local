@@ -47,47 +47,54 @@ def validar_api_key_parceiro(
 
 
 
-#------------------------------------------------------------  
-# --- Rota 1: Buscar Produto por descricao-------------------
-#------------------------------------------------------------
-@router.get("/tabela_produtos/", dependencies=[Depends(validar_api_key_parceiro)])
+# ------------------------------------------------------------
+# Rota: Buscar tabela de produtos
+# ------------------------------------------------------------
+@router.get(
+    "/tabela_produtos/",
+    dependencies=[Depends(validar_api_key_parceiro)]
+)
 def get_tabela_produtos(
     limit: int = Query(50, ge=1, le=200),
     offset: int = Query(0, ge=0)
-):
     #limit=50, offset=0    → primeiros 50
     #limit=50, offset=50   → próximos 50
-    #limit=50, offset=100  → próximos 50     
-
-    conn = get_conexao()
-    cursor = conn.cursor(cursor_factory=RealDictCursor)
-
-    total = contar_produtos()
+    #limit=50, offset=100  → próximos 50  
+):
+    conn = None
+    cursor = None
 
     try:
+        conn = get_conexao()
+
+        # Utiliza a mesma conexão para contar os produtos
+        total = contar_produtos(conn)
+
+        cursor = conn.cursor(cursor_factory=RealDictCursor)
+
         cursor.execute(
             """
-            SELECT 
-            est_codigo,
-            est_codfabricante,
-            est_codoriginal,
-            est_codreferencia,
-            est_descricao,
-            est_aplicacao,
-            est_qtde,
-            est_preco1,
-            est_preco2,
-            est_preco3,
-            est_preco4,
-            fabricante.fab_fabricante,
-            segmentos.seg_segmento
+            SELECT
+                est_codigo,
+                est_codfabricante,
+                est_codoriginal,
+                est_codreferencia,
+                est_descricao,
+                est_aplicacao,
+                est_qtde,
+                est_preco1,
+                est_preco2,
+                est_preco3,
+                est_preco4,
+                fabricante.fab_fabricante,
+                segmentos.seg_segmento
             FROM estoque
-            LEFT JOIN fabricante 
-            ON fabricante.fab_codigo = estoque.est_fabricante
-            LEFT JOIN segmentos 
-            ON segmentos.seg_codigo = estoque.est_segmento
+            LEFT JOIN fabricante
+                ON fabricante.fab_codigo = estoque.est_fabricante
+            LEFT JOIN segmentos
+                ON segmentos.seg_codigo = estoque.est_segmento
             ORDER BY est_descricao ASC
-             LIMIT %s OFFSET %s
+            LIMIT %s OFFSET %s
             """,
             (limit, offset)
         )
@@ -112,16 +119,15 @@ def get_tabela_produtos(
                 "segmento": r["seg_segmento"],
                 "qtde": r["est_qtde"],
                 "preco1": r["est_preco1"],
-                "preco2": r["est_preco1"],
-                "preco3": r["est_preco1"],
-                "preco4": r["est_preco1"],
+                "preco2": r["est_preco2"],
+                "preco3": r["est_preco3"],
+                "preco4": r["est_preco4"],
                 "encontrado": True
             }
             for r in rows
         ]
 
         return {
-            
             "items": resultados,
             "offset": offset,
             "limit": limit,
@@ -129,5 +135,8 @@ def get_tabela_produtos(
         }
 
     finally:
-        cursor.close()
-        release_conexao(conn)
+        if cursor is not None:
+            cursor.close()
+
+        if conn is not None:
+            release_conexao(conn)

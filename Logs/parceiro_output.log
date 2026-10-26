@@ -24,3 +24,10 @@ INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
 INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
 INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
 INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     104.30.167.164:0 - "HEAD / HTTP/1.1" 404 Not Found
+INFO:     177.195.77.193:0 - "GET /docs HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     177.195.77.193:0 - "GET /tabela_produtos/?limit=50&offset=0 HTTP/1.1" 200 OK

@@ -74,28 +74,15 @@ def contar_produtos_por_descricao(descricao: str):
         release_conexao(conn)
 
 
-#-----------------------------------------------------------
-# conta Produtos por descricao
-#-----------------------------------------------------------
-def contar_produtos():
-    conn = get_conexao()
-    cursor = conn.cursor()
+# -----------------------------------------------------------
+# Conta produtos utilizando a conexão existente
+# -----------------------------------------------------------
+def contar_produtos(conn):
+    with conn.cursor() as cursor:
+        cursor.execute("""
+            SELECT COUNT(*)
+            FROM estoque
+        """)
 
-    try:
-       cursor.execute("""
-       SELECT COUNT(*)
-       FROM estoque
-       """)
-
-       resultado = cursor.fetchone()
-
-       if resultado is None:
-           return None
-
-       return resultado[0]
-
-    finally:
-        cursor.close()
-        release_conexao(conn)
-
-
+        resultado = cursor.fetchone()
+        return resultado[0] if resultado else 0
